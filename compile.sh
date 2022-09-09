@@ -1,6 +1,7 @@
 #!/bin/bash
 
 echo "-------------------- Start Compile --------------------"
-make && make clean
+cd src
+make && make clean 
 echo "-------------------- Done Compile --------------------"
-./shake $1 $2 $3
+../bin/shake $1 $2 $3

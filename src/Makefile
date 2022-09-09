@@ -1,17 +1,17 @@
 PROGRAM = shake
 CC = gcc
-CFLAGS = -O2
+CFLAGS = -Wall -O2
 OBJS = fips202 shake
 
 
-shake:	shake.o fips202.o
-	gcc -Wall -O2 -o shake shake.o fips202.o
+../bin/shake:	../obj/shake.o ../obj/fips202.o
+	$(CC) $(CFLAGS) -o ../bin/shake ../obj/shake.o ../obj/fips202.o
 
-shake.o:	shake.c
-	gcc -c -Wall shake.c
+../obj/shake.o:	shake.c
+	$(CC) $(CFLAGS) -c shake.c -o ../obj/shake.o
 
-fips202.o:	fips202.c
-	gcc -c fips202.c
+../obj/fips202.o:	fips202.c
+	$(CC) $(CFLAGS) -c fips202.c -o ../obj/fips202.o
 
 clean:
-	rm -f shake.o fips202.o
+	rm -f ../obj/shake.o ../obj/fips202.o
