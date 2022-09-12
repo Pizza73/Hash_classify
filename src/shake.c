@@ -154,9 +154,6 @@ int main(int argc, char *argv[]){
 
 	hash_generate(input, fp, argv[2]);
 
-
-
-
 	/*
 	unsigned char input = '1';
 	unsigned char output;
