@@ -86,9 +86,9 @@ int hash_generate(int a, FILE *fp, char *sp){
 	size_t outlen = sizeof(output);
 	int output_element = sizeof(output) / sizeof(output[0]);
 
-	// long iter_num = a * 1000000000 / (8 * output_element);
-	long iter_num = a * 100000 / (8 * output_element);
-	iter_num = 1;
+	long iter_num = a * 1000000000 / (8 * output_element);
+	// long iter_num = a * 100000 / (8 * output_element);
+	iter_num = 2;
 
 
 	#ifdef VERBOSE
