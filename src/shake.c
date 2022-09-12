@@ -79,9 +79,9 @@ int hash_generate(int a, FILE *fp, char *sp){
 	// input[0] = 255;
 	// input[1] = 255; 
 	// input[3] = 255;
-	printf("input[2]=%d\n", input[2]);
+	printf("input[2]=%d\n", input[1]);
 	size_t inlen = sizeof(input);
-	printf("Input length : %d\n", inlen);
+	printf("Input length : %ld\n", inlen);
 	uint8_t output[32] = {0};
 	size_t outlen = sizeof(output);
 	int output_element = sizeof(output) / sizeof(output[0]);
@@ -144,7 +144,7 @@ int hash_generate(int a, FILE *fp, char *sp){
 
 
 int main(int argc, char *argv[]){
- 	FILE *fp;
+ 	FILE *fp = NULL;
 	int input = atoi(argv[1]);
 
 	#ifdef VERBOSE
